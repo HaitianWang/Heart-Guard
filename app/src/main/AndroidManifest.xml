@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wechel.heart">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />   <!--使用蓝牙 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SEND_SMS" /> <!-- 发送短信 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 调用手机振动器 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/incong"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/incong"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".show_currentrate"
+            android:label="您的当前心率" />
+        <activity
+            android:name=".Show_history"
+            android:label="您的心率变化" />
+        <activity
+            android:name=".future"
+            android:label="您未来几小时的心率预测" />
+        <activity
+            android:name=".Family.Send_Message"
+            android:label="联系人设置" />
+        <activity android:name=".Video.Save_Heart"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>
